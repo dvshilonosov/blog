@@ -1,9 +1,9 @@
 ---
-title: Welcome to Wowchemy, the website builder for Hugo
-subtitle: Welcome 👋 We know that first impressions are important, so we've populated your new site with some initial content to help you get familiar with everything in no time.
+title: Редактор vim
+subtitle: Добро пожаловать 👋 Здесь Вы узнаете, как пользоваться мощным текстовым редактором vim.
 
 # Summary for listings and search engines
-summary: Welcome 👋 We know that first impressions are important, so we've populated your new site with some initial content to help you get familiar with everything in no time.
+summary: Добро пожаловать 👋 Здесь Вы узнаете, как пользоваться мощным текстовым редактором vim.
 
 # Link this post with a project
 projects: []
@@ -23,88 +23,121 @@ featured: false
 # Featured image
 # Place an image named `featured.jpg/png` in this page's folder and customize its options here.
 image:
-  caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/CpkOjOcXdUY)'
+  caption: 'Image credit: [**Unknown**](https://guinuxbr.com/img/vim-cheat-sheet/vim-logo.png)'
   focal_point: ''
   placement: 2
   preview_only: false
 
 authors:
   - admin
-  - 吳恩達
 
 tags:
   - Academic
-  - 开源
 
 categories:
   - Demo
-  - 教程
 ---
 
-```python
-import libr
-print('hello')
-```
+# Теоретическое введение
+## Указания к работе
+В большинстве дистрибутивов Linux в качестве текстового редактора по умолчанию устанавливается интерактивный экранный редактор vi (Visual display editor).
+Редактор vi имеет три режима работы:
+- командный режим — предназначен для ввода команд редактирования и навигации по редактируемому файлу;
+- режим вставки — предназначен для ввода содержания редактируемого файла;
+- режим последней (или командной) строки — используется для записи изменений в файл и выхода из редактора.
 
-## Overview
+Для вызова редактора vi необходимо указать команду vi и имя редактируемого файла: vi <имя_файла>
+При этом в случае отсутствия файла с указанным именем будет создан такой файл.
+Переход в командный режим осуществляется нажатием клавиши Esc . Для выхода из редактора vi необходимо перейти в режим последней строки: находясь в командном режиме, нажать Shift-; (по сути символ : — двоеточие), затем:
+- набрать символы wq, если перед выходом из редактора требуется записать изменения в файл;
+- набрать символ q (или q!), если требуется выйти из редактора без сохранения.
 
-1. The Wowchemy website builder for Hugo, along with its starter templates, is designed for professional creators, educators, and teams/organizations - although it can be used to create any kind of site
-2. The template can be modified and customised to suit your needs. It's a good platform for anyone looking to take control of their data and online identity whilst having the convenience to start off with a **no-code solution (write in Markdown and customize with YAML parameters)** and having **flexibility to later add even deeper personalization with HTML and CSS**
-3. You can work with all your favourite tools and apps with hundreds of plugins and integrations to speed up your workflows, interact with your readers, and much more
+**Замечание**. Следует помнить, что vi различает прописные и строчные буквы при наборе (восприятии) команд.
 
-[![The template is mobile first with a responsive design to ensure that your site looks stunning on every device.](https://raw.githubusercontent.com/wowchemy/wowchemy-hugo-modules/main/starters/academic/preview.png)](https://wowchemy.com)
+## Основные группы команд редактора
+### Команды позиционирования
+- 0 (ноль) — переход в начало строки;
+- $ — переход в конец строки;
+- G — переход в конец файла;
+- n G — переход на строку с номером n.
 
-## Get Started
+### Команды перемещения по файлу
+- Ctrl-d — перейти на пол-экрана вперёд;
+- Ctrl-u — перейти на пол-экрана назад;
+- Ctrl-f — перейти на страницу вперёд;
+- Ctrl-b — перейти на страницу назад.
 
-- 👉 [**Create a new site**](https://wowchemy.com/templates/)
-- 📚 [**Personalize your site**](https://wowchemy.com/docs/)
-- 💬 [Chat with the **Wowchemy community**](https://discord.gg/z8wNYzb) or [**Hugo community**](https://discourse.gohugo.io)
-- 🐦 Twitter: [@wowchemy](https://twitter.com/wowchemy) [@GeorgeCushen](https://twitter.com/GeorgeCushen) [#MadeWithWowchemy](https://twitter.com/search?q=%23MadeWithWowchemy&src=typed_query)
-- 💡 [Request a **feature** or report a **bug** for _Wowchemy_](https://github.com/wowchemy/wowchemy-hugo-themes/issues)
-- ⬆️ **Updating Wowchemy?** View the [Update Tutorial](https://wowchemy.com/docs/hugo-tutorials/update/) and [Release Notes](https://wowchemy.com/updates/)
+### Команды перемещения по словам1
+- W или w — перейти на слово вперёд;
+- n W или n w — перейти на n слов вперёд;
+- b или B — перейти на слово назад;
+- n b или n B — перейти на n слов назад.
 
-## Crowd-funded open-source software
+## Команды редактирования
+### Вставка текста
+- а — вставить текст после курсора;
+- А — вставить текст в конец строки;
+- i — вставить текст перед курсором;
+- n i — вставить текст n раз;
+- I — вставить текст в начало строки.
 
-To help us develop this template and software sustainably under the MIT license, we ask all individuals and businesses that use it to help support its ongoing maintenance and development via sponsorship.
+### Вставка строки
+- о — вставить строку под курсором;
+- О — вставить строку над курсором.
 
-### [❤️ Click here to become a sponsor and help support Wowchemy's future ❤️](https://wowchemy.com/sponsor/)
+### Удаление текста
+- x — удалить один символ в буфер;
+- d w — удалить одно слово в буфер;
+- d $ — удалить в буфер текст от курсора до конца строки;
+- d 0 — удалить в буфер текст от начала строки до позиции курсора;
+- d d — удалить в буфер одну строку;
+- n d d — удалить в буфер n строк.
 
-As a token of appreciation for sponsoring, you can **unlock [these](https://wowchemy.com/sponsor/) awesome rewards and extra features 🦄✨**
+### Отмена и повтор произведённых изменений
+- u — отменить последнее изменение;
+- . — повторить последнее изменение.
 
-## Ecosystem
+### Копирование текста в буфер
+- Y — скопировать строку в буфер;
+- n Y — скопировать n строк в буфер;
+- y w — скопировать слово в буфер.
 
-- **[Hugo Academic CLI](https://github.com/wowchemy/hugo-academic-cli):** Automatically import publications from BibTeX
+### Вставка текста из буфера
+- p — вставить текст из буфера после курсора;
+- P — вставить текст из буфера перед курсором.
 
-## Inspiration
+### Замена текста
+- c w — заменить слово;
+- n c w — заменить n слов;
+- c $ — заменить текст от курсора до конца строки;
+- r — заменить слово;
+- R — заменить текст.
 
-[Check out the latest **demo**](https://academic-demo.netlify.com/) of what you'll get in less than 10 minutes, or [view the **showcase**](https://wowchemy.com/user-stories/) of personal, project, and business sites.
+### Поиск текста
+- / текст — произвести поиск вперёд по тексту указанной строки символов текст;
+- ? текст — произвести поиск назад по тексту указанной строки символов текст.
 
-## Features
+## Команды редактирования в режиме командной строки
+### Копирование и перемещение текста
+- : n,m d — удалить строки с n по m;
+- : i,j m k — переместить строки с i по j, начиная со строки k;
+- : i,j t k — копировать строки с i по j в строку k;
+- : i,j w имя-файла — записать строки с i по j в файл с именем имя-файла.
 
-- **Page builder** - Create _anything_ with [**widgets**](https://wowchemy.com/docs/page-builder/) and [**elements**](https://wowchemy.com/docs/content/writing-markdown-latex/)
-- **Edit any type of content** - Blog posts, publications, talks, slides, projects, and more!
-- **Create content** in [**Markdown**](https://wowchemy.com/docs/content/writing-markdown-latex/), [**Jupyter**](https://wowchemy.com/docs/import/jupyter/), or [**RStudio**](https://wowchemy.com/docs/install-locally/)
-- **Plugin System** - Fully customizable [**color** and **font themes**](https://wowchemy.com/docs/customization/)
-- **Display Code and Math** - Code highlighting and [LaTeX math](https://en.wikibooks.org/wiki/LaTeX/Mathematics) supported
-- **Integrations** - [Google Analytics](https://analytics.google.com), [Disqus commenting](https://disqus.com), Maps, Contact Forms, and more!
-- **Beautiful Site** - Simple and refreshing one page design
-- **Industry-Leading SEO** - Help get your website found on search engines and social media
-- **Media Galleries** - Display your images and videos with captions in a customizable gallery
-- **Mobile Friendly** - Look amazing on every screen with a mobile friendly version of your site
-- **Multi-language** - 34+ language packs including English, 中文, and Português
-- **Multi-user** - Each author gets their own profile page
-- **Privacy Pack** - Assists with GDPR
-- **Stand Out** - Bring your site to life with animation, parallax backgrounds, and scroll effects
-- **One-Click Deployment** - No servers. No databases. Only files.
+### Запись в файл и выход из редактора
+- : w — записать изменённый текст в файл, не выходя из vi;
+- : w имя-файла — записать изменённый текст в новый файл с именем имя-файла;
+- : w ! имя-файла — записать изменённый текст в файл с именем имя-файла;
+- : w q — записать изменения в файл и выйти из vi;
+- : q — выйти из редактора vi;
+- : q ! — выйти из редактора без записи;
+- : e ! — вернуться в командный режим, отменив все изменения, произведённые
+со времени последней записи.
 
-## Themes
-
-Wowchemy and its templates come with **automatic day (light) and night (dark) mode** built-in. Alternatively, visitors can choose their preferred mode - click the moon icon in the top right of the [Demo](https://academic-demo.netlify.com/) to see it in action! Day/night mode can also be disabled by the site admin in `params.toml`.
-
-[Choose a stunning **theme** and **font**](https://wowchemy.com/docs/customization) for your site. Themes are fully customizable.
-
-## License
-
-Copyright 2016-present [George Cushen](https://georgecushen.com).
-
-Released under the [MIT](https://github.com/wowchemy/wowchemy-hugo-themes/blob/master/LICENSE.md) license.
+## Опции
+Опции редактора vi позволяют настроить рабочую среду. Для задания опций используется команда set (в режиме последней строки):
+- <:> set all — вывести полный список опций;
+- <:> set nu — вывести номера строк;
+- `:` set list — вывести невидимые символы;
+- <kbd>:</kbd> set ic — не учитывать при поиске, является ли символ прописным или строчным.
+Если вы хотите отказаться от использования опции, то в команде set перед именем опции надо поставить no.

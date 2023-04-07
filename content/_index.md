@@ -46,17 +46,17 @@ sections:
     content:
       title: Skills
       items:
-        - name: R
-          description: 90%
-          icon: r-project
-          icon_pack: fab
-        - name: Statistics
+        - name: C/C++
           description: 100%
-          icon: chart-line
+          icon: c
+          icon_pack: fab
+        - name: CMake
+          description: 30%
+          icon: shapes
           icon_pack: fas
-        - name: Photography
-          description: 10%
-          icon: camera-retro
+        - name: LaTeX
+          description: 60%
+          icon: comments-dollar
           icon_pack: fas
   - block: experience
     content:
@@ -70,27 +70,27 @@ sections:
       #   Leave `date_end` empty if it's your current employer.
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
-        - title: CEO
-          company: GenCoin
-          company_url: ''
-          company_logo: org-gc
-          location: California
-          date_start: '2021-01-01'
+        - title: Programmer
+          company: Microsoft
+          company_url: 'https://www.microsoft.com/ru-ru'
+          company_logo: 
+          location: Silicon Valley, USA
+          date_start: '2022-06-02'
           date_end: ''
           description: |2-
               Responsibilities include:
 
               * Analysing
-              * Modelling
-              * Deploying
-        - title: Professor of Semiconductor Physics
-          company: University X
-          company_url: ''
-          company_logo: org-x
-          location: California
-          date_start: '2016-01-01'
-          date_end: '2020-12-31'
-          description: Taught electronic engineering and researched semiconductor physics.
+              * Projecting
+              * Programming
+        - title: Student
+          company: RUDN
+          company_url: 'https://www.rudn.ru/'
+          company_logo:
+          location: Moscow, Russia
+          date_start: '2017-09-01'
+          date_end: '2022-06-01'
+          description: Taught programming and mathematics.
     design:
       columns: '2'
   - block: accomplishments
@@ -108,28 +108,21 @@ sections:
       items:
         - certificate_url: https://www.coursera.org
           date_end: ''
-          date_start: '2021-01-25'
-          description: ''
-          organization: Coursera
+          date_start: '2020-05-26'
+          description: 'Studied C++ Classic Course'
+          organization: Сourserа
           organization_url: https://www.coursera.org
-          title: Neural Networks and Deep Learning
+          title: Classic C++ (STD_C++17)
           url: ''
-        - certificate_url: https://www.edx.org
+        - certificate_url: https://stepik.org/catalog
           date_end: ''
           date_start: '2021-01-01'
-          description: Formulated informed blockchain models, hypotheses, and use cases.
-          organization: edX
-          organization_url: https://www.edx.org
-          title: Blockchain Fundamentals
-          url: https://www.edx.org/professional-certificate/uc-berkeleyx-blockchain-fundamentals
-        - certificate_url: https://www.datacamp.com
-          date_end: '2020-12-21'
-          date_start: '2020-07-01'
-          description: ''
-          organization: DataCamp
-          organization_url: https://www.datacamp.com
-          title: 'Object-Oriented Programming in R'
-          url: ''
+          description: Studied basic algorithms and data sctructures.
+          organization: Stepik
+          organization_url: https://stepik.org/catalog
+          title: Algorithms and Data Structures
+          url: https://stepik.org/catalog
+
     design:
       columns: '2'
   - block: collection

@@ -3,8 +3,8 @@
 title: Shilonosov Danil
 
 # Full name (for SEO)
-first_name: Shilonosov
-last_name: Danil
+first_name: Danil
+last_name: Shilonosov
 
 # Status emoji
 status:
