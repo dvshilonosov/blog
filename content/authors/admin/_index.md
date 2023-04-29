@@ -14,7 +14,7 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: C++ Enjoyer
+role: C++ Enjoyer   
 
 # Organizations/Affiliations to show in About widget
 organizations:
@@ -48,10 +48,39 @@ social:
   - icon: envelope
     icon_pack: fas
     link: '/#contact'
+    
   - icon: github
     icon_pack: fab
-    link: https://github.com/dvshilonosov
+    link: 'github.com/dvshilonosov'
+  
+  - icon: book-open
+    icon_pack: fas
+    link: https://elibrary.ru/
+    
+  - icon: google
+    icon_pack: fab
+    link: https://scholar.google.com/
 
+  - icon: orcid
+    icon_pack: fab
+    link: https://orcid.org/
+    
+  - icon: mendeley
+    icon_pack: fab
+    link: https://www.mendeley.com/
+    
+  - icon: researchgate
+    icon_pack: fab
+    link: https://www.researchgate.net/
+  
+  - icon: academia
+    icon_pack: fab
+    link: https://www.academia.edu/
+  
+  - icon: arxiv
+    icon_pack: fab
+    link: https://arxiv.org/
+    
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: 'qishidaeto@gmail.com'
 
